@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Video Game Trivia</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="jumbotron jumbotron-fluid" id="jumbo">
+        <div class="container">
+          <h1 class="display-4">Video Game Trivia</h1>
+          <p class="lead">
+            Do you consider yourself a gamer?<br />Test your knowledge here!
+          </p>
+        </div>
+      </div>
+
+      <div id="startBtn">
+        <button id="startGame">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Start Game
+        </button>
+      </div>
+
+      <div id="ingame">
+        <div id="timer">
+          <p id="remaining">
+            Time Remaining: <span id="countdown">0</span> Seconds
+          </p>
+        </div>
+        <!--end timer-->
+
+        <div id="question-display">
+          <h3 id="question">question 1</h3>
+        </div>
+        <!--ends question display-->
+
+        <!-- Buttons for answer entry -->
+        <div id="buttons">
+          <button class="select" id="1">choice 1</button><br />
+          <button class="select" id="2">choice 2</button><br />
+          <button class="select" id="3">choice 3</button><br />
+          <button class="select" id="4">choice 4</button><br />
+        </div>
+
+        <!-- BS Progress bar -->
+        <div class="progress" style="height:30px">
+          <div
+            id="corrBar"
+            class="progress-bar bg-success"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            id="incoBar"
+            class="progress-bar bg-danger"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+          <div
+            id="progBar"
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 id="modal-title"></h3>
+              <p id="modal-timer">
+                Closing in: <span id="modal-countdown">15</span> Seconds
+              </p>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-hidden="true"
+              >
+                ×
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <img
+                id="picture"
+                src="https://media.giphy.com/media/f7rDDvcOV9n8I/giphy.gif"
+                style="width:100%;height:100%;"
+              />
+              <hr />
+              <p id="answer">
+                Correct answer was <b><span id="answerKey"></span></b>.
+              </p>
+              <p id="explanation"></p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" id="restart">
+                Restart Game
+              </button>
+            </div>
+          </div>
+          <!-- End modal content -->
+        </div>
+        <!-- End the modal -->
+      </div>
+      <!-- End ingame -->
+    </div>
+    <!-- End wrapper -->
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+  </body>
+</html>
